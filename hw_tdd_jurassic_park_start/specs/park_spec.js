@@ -47,15 +47,20 @@ describe('Park', function() {
   });
 
   xit('should be able to find the dinosaur that attracts the most visitors');
+
+  //loop through array of dinos
+  //compare dinosaur.guestsAttractedPerDay of each to find highest
+  //save highest in variable
+
+  it('should be able to find all dinosaurs of a particular species', function (){
   park.addDino(dino1);
   park.addDino(dino2);
   park.addDino(dino3);
+  park.findSameSpecies(park.dinosaursCollection, 'T-rex')
+  const actual = park.dinosaursCollection;
+  assert.deepStrictEqual(actual, [dino1])
 
-  //loop through array of dinos
-  //compare dinosaur.guestsAttractedPerDay to find highest
-  //save highest in variable
-
-  xit('should be able to find all dinosaurs of a particular species');
+  });
 
   //take species as argument
   //loop through array of dinos
@@ -67,10 +72,11 @@ describe('Park', function() {
   //loop through array of dinos
   //add guestsAttractedPerDay of each dino to variable
   //return variable
+
   xit('should be able to calculate the total number of visitors per year');
 
-  //..as above x 365?
+  //..as above * 365?
   xit('should be able to calculate total revenue for one year');
 
-  //as above x park ticket price
+  //as above * park ticket price
 });
