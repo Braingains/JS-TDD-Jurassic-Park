@@ -33,27 +33,44 @@ describe('Park', function() {
   it('should be able to add a dinosaur to its collection', function () {
     park.addDino(dino1);
     const actual = park.dinosaursCollection;
-    assert.deepStrictEqual(actual, dino1);
+    assert.deepStrictEqual(actual, [dino1]);
 
   });
 
   it('should be able to remove a dinosaur from its collection', function () {
-    park.addDino('raptor');
-    park.addDino('t-rex');
+    park.addDino(dino1);
+    park.addDino(dino2);
     park.removeDino();
     const actual = park.dinosaursCollection;
-    assert.deepStrictEqual(actual, ['raptor']);
+    assert.deepStrictEqual(actual, [dino1]);
 
   });
 
-  it('should be able to find the dinosaur that attracts the most visitors');
+  xit('should be able to find the dinosaur that attracts the most visitors');
+  park.addDino(dino1);
+  park.addDino(dino2);
+  park.addDino(dino3);
+
+  //loop through array of dinos
+  //compare dinosaur.guestsAttractedPerDay to find highest
+  //save highest in variable
 
   xit('should be able to find all dinosaurs of a particular species');
 
+  //take species as argument
+  //loop through array of dinos
+  //if species = dinosaur.species add to array
+  //return array
+
   xit('should be able to calculate the total number of visitors per day');
 
+  //loop through array of dinos
+  //add guestsAttractedPerDay of each dino to variable
+  //return variable
   xit('should be able to calculate the total number of visitors per year');
 
+  //..as above x 365?
   xit('should be able to calculate total revenue for one year');
 
+  //as above x park ticket price
 });
